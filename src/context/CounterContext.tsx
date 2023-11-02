@@ -62,7 +62,7 @@
         }
     }
 
-    type CounterContextType = ReturnType<typeof useCounterContext>
+    type UseCounterContextType = ReturnType<typeof useCounterContext>
 
     // type contextType = {
     //     increment: () => void;
@@ -71,14 +71,14 @@
     //     state: StateType;
     // }
 
-    const initContextState:CounterContextType ={
+    const initContextState:UseCounterContextType ={
             increment: () => {},
             decrement: () => {},
             handleInput: () => {},
             state: initState
     }
 
-    export const CounterContext =createContext<CounterContextType>(initContextState)
+    export const CounterContext =createContext<UseCounterContextType>(initContextState)
     
     type ChildrenType ={
         children?: ReactElement | undefined
